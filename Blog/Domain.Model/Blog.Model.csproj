@@ -85,7 +85,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Post\Post.cs" />
+    <Compile Include="Post\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Infrastructure\Blog.Infrastructure.csproj">
+      <Project>{4308FBA4-BC01-4771-BD9B-8843135BAACF}</Project>
+      <Name>Blog.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

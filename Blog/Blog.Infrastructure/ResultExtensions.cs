@@ -66,6 +66,14 @@ namespace Blog.Infrastructure
             return result;
         }
 
+        public static Result OnFailure(this Result result, Action<string> func)
+        {
+            if (result.Failure)
+                func(result.Error);
+
+            return result;
+        }
+
         public static Result OnBoth(this Result result, Action<Result> action)
         {
             action(result);
